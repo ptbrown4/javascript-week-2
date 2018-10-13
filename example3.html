@@ -5,15 +5,21 @@
         </title>
     </head>
     <body>
+        <h2 id="pageTitle">This is my Title</h2>
         <input type="text" id="one">
-        <input type="text" id="two">
         <button onclick="myMessage()" id="doSomething">Click Me!</button>
+        <ul id="msg">
+            <li>This is my message.</li>
+        </ul>
     </body>
     <script>
         function myMessage(){
-        var message = "This is a message";
-        console.log(message);
-        alert(message);
+            var newListItem = document.getElementById("one").value;
+            document.getElementById("one").value = "";
+            console.log(newListItem);
+            // document.title = newTitle;
+            var curList = document.getElementById("msg").innerHTML;
+            document.getElementById("msg").innerHTML = curList + "<li>" + newListItem + "</li>";
         }
     </script>
 </html>
