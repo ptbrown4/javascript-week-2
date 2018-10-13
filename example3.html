@@ -13,13 +13,27 @@
         </ul>
     </body>
     <script>
+        var color = "crimson";
+        document.getElementById("one").focus();
         function myMessage(){
-            var newListItem = document.getElementById("one").value;
-            document.getElementById("one").value = "";
-            console.log(newListItem);
-            // document.title = newTitle;
-            var curList = document.getElementById("msg").innerHTML;
-            document.getElementById("msg").innerHTML = curList + "<li>" + newListItem + "</li>";
+            var one = document.getElementById("one");
+            var msg = document.getElementById("msg");
+
+            var newListItem = one.value;
+            one.value = "";
+
+            // console.log(newListItem);
+
+            var curList = msg.innerHTML;
+            msg.innerHTML = curList + '<li style="background: ' + color +'">' + newListItem + "</li>";
+            if(color === "crimson"){
+                document.title = "NOOOOOOO"
+                color = "orange";
+            } else {
+                color = "crimson";
+            }
+            // msg.style="background: " + color;
+            one.focus();
         }
     </script>
 </html>
