@@ -4,7 +4,16 @@
             My JavaScript Website
         </title>
     </head>
+    <body>
+        <input type="text" id="one">
+        <input type="text" id="two">
+        <button onclick="myMessage()" id="doSomething">Click Me!</button>
+    </body>
     <script>
-        console.log("This is a message")
+        function myMessage(){
+        var message = "This is a message";
+        console.log(message);
+        alert(message);
+        }
     </script>
 </html>
